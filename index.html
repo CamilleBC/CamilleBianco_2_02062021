@@ -4,8 +4,44 @@
        <title>Web Reservia</title>
        <meta charset="utf-8">
        <link rel="stylesheet" href="pageCssReservia.css">
+       <script src="https://kit.fontawesome.com/9603372c9d.js" crossorigin="anonymous"></script>
    </head>
    <body>
-       
+        <div id="bloc_blanc">
+        <header>
+            <div id="topHeader">
+            <div id="entête">
+                <div id="logo"><img src="images/logo/Reservia.svg" alt="Logo Reservia"></div>
+                <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+                <p>En plein centre ville ou en pleine nature</p>
+                <form action="saisie.php" method="post">
+                    <p><label for="ville"><i class="fas fa-map-marker-alt"></i></i></label>
+                        <input type="text" name="ville" placeholder="Marseille,France">
+                        <input type="submit" value="Rechercher"></p>
+                </form>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="hebergementAncre">Hébergements</a></li>
+                    <li><a href="activitesAncre">Activités</a></li>
+                    <li>S'incrire</li>
+                </ul>
+            </nav>
+            </div>
+            <div id="filtres">
+                <ul>
+                    <li class="filtres"><strong>Filtres</strong></li>
+                    <li class="filtres"><i class="fas fa-money-bill-wave"></i>Economique</li>
+                    <li class="filtres"><i class="fas fa-child"></i>Familiale</li>
+                    <li class="filtres"><i class="fas fa-heart"></i>Romantique</li>
+                    <li class="filtres"><i class="fas fa-dog"></i>Animaux autorisés</li>
+                </ul></p>
+                <p><i class="fas fa-info-circle"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </header>
+        <section id="section1"></section>
+        <section id="section2"></section>
+        <footer></footer>
+        </div>
    </body> 
 </html>
