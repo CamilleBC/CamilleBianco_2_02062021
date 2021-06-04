@@ -8,14 +8,13 @@
     src: url(Raleway-Regular.ttf);
 }
 /*Mise en place générale du texte*/
-body {
+html {
     font-family: Raleway,sans-serif;
     color: black;
+    font-size: 100%;
 }
 
-h1 {
-    font-size: 20px;
-}
+
 
 h2 {
     font-size: 20px;
@@ -23,6 +22,9 @@ h2 {
 
 h3 {
     font-size: 16px;
+}
+a {
+    text-decoration: none;
 }
 /*Header*/
 header {
@@ -118,5 +120,53 @@ span {
 
 #logementDispo i {
     color: #0065FC;
+}
+/*Mise en forme section 1*/
+
+#section1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Mise en forme ligne 1 de la section 1*/
+#ligne1 {
+    display: flex;
+    justify-content: space-around;
+    border: black dashed 1px;
+}
+
+.hebergements {
+    width: 25%;
+    border: #0065FC 1px solid;
+}
+
+
+#ligne1 img {
+    width: 240px;
+    height: auto;
+    object-fit: cover;
+    border: orange 2px dashed;
+}
+
+/* Mise en forme ligne 2 de la section 1*/
+#ligne2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#ligne2 img {
+    width: 240px;
+}
+
+/*Mise en forme aside*/
+
+aside {
+    width: 34%;
+    border: dashed pink 1px;
+}
+
+.populaires img {
+    width: 135px;
 }
 
