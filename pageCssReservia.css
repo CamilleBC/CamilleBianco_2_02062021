@@ -1,0 +1,122 @@
+#bloc_blanc {
+    width: 100%;
+    margin: auto;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Regular.ttf);
+}
+/*Mise en place générale du texte*/
+body {
+    font-family: Raleway,sans-serif;
+    color: black;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 16px;
+}
+/*Header*/
+header {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+/*Alignement vertical côté gauche du Header*/
+#leftHeader {
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-around;
+}
+
+
+/*Mise en ligne liste Nav*/
+.ligneMenu {
+    display: inline-block;
+    margin: 1em;
+}
+
+/*Mise en forme zone de saisie*/
+form {
+    width: 50%;
+    display: flex;  
+}
+#marqueur{
+    border: #F2F2F2 2px solid;
+    background-color: #F2F2F2;
+    height: 30px;
+    padding: 1em 1em 0 1em;
+    border-radius: 5em 0 0 5em;
+}
+#ville {
+    height: 44px; 
+    font-size: 1em;
+    border: 2px #F2F2F2 solid;
+    padding-left: 1em;
+    border-left: none;
+    border-right: none;
+}
+#contourBouton {
+    color: white;  
+    border: none;
+    background-color: blue;
+    height: 50px;
+    border-radius: 0 5em 5em 0;
+}
+
+/*Alignement filtres et mise en formes*/
+#filtres ul {
+    display: flex;
+    padding: 0;/*Retire décalage dû à la liste*/
+}
+
+.filtres {    
+    list-style: none;
+    margin-left: 1.5em;
+    border: 2px solid #d9d9d9;
+    height: 48px;
+    border-radius: 5em;    
+}
+
+span {
+    margin-right: 1em;
+}
+
+#titreFiltres{    
+    margin-left:0%;
+    border: none;
+    padding-top: 1em;
+         
+}
+
+.filtres i {
+    position: relative;
+    right: 0.19em;
+    width: 3em;
+    border-radius:50% ;
+    padding-top: 1em;
+    padding-bottom:1em ;/*padding-top et padding-bottom pour centrer ont besoin d'être : (width-taille du logo)/2*/
+    text-align: center;
+    background-color: #DEEBFF ;
+    color: #0065FC;
+}
+
+.filtres:hover {
+    background-color: #bac7db;
+}
+
+/* Mise en forme logo i */
+
+#logementDispo i {
+    color: #0065FC;
+}
+
