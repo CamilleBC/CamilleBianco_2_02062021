@@ -8,20 +8,22 @@
     src: url(Raleway-Regular.ttf);
 }
 /*Mise en place générale du texte*/
-html {
+body{
     font-family: Raleway,sans-serif;
     color: black;
     font-size: 100%;
 }
 
-
+h1 {
+    font-size: 1.5rem;
+}
 
 h2 {
-    font-size: 20px;
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 16px;
+    font-size: 1rem;
 }
 a {
     text-decoration: none;
@@ -29,22 +31,24 @@ a {
 /*Header*/
 header {
     width: 100%;
-    height: 400px;
+    height: 25rem;
     display: flex;
     justify-content: space-around;
+    box-sizing: border-box;
 }
 /*Alignement vertical côté gauche du Header*/
 #leftHeader {
     display: flex;
     flex-direction: column ;
     justify-content: space-around;
+    box-sizing: border-box;
 }
 
 
 /*Mise en ligne liste Nav*/
 .ligneMenu {
     display: inline-block;
-    margin: 1em;
+    margin: 1rem;
 }
 
 /*Mise en forme zone de saisie*/
@@ -83,14 +87,14 @@ form {
 
 .filtres {    
     list-style: none;
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
     border: 2px solid #d9d9d9;
-    height: 48px;
+    height: 3rem;
     border-radius: 5em;    
 }
 
 span {
-    margin-right: 1em;
+    margin-right: 1rem;
 }
 
 #titreFiltres{    
@@ -103,10 +107,10 @@ span {
 .filtres i {
     position: relative;
     right: 0.19em;
-    width: 3em;
-    border-radius:50% ;
-    padding-top: 1em;
-    padding-bottom:1em ;/*padding-top et padding-bottom pour centrer ont besoin d'être : (width-taille du logo)/2*/
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius:50% ;/*padding-top et padding-bottom pour centrer ont besoin d'être : (width-taille du logo)/2*/
     text-align: center;
     background-color: #DEEBFF ;
     color: #0065FC;
@@ -145,6 +149,7 @@ span {
     width: 240px;
     height: auto;
     object-fit: cover;
+    box-sizing: border-box;
     border: orange 2px dashed;
 }
 
