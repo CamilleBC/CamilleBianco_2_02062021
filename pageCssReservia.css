@@ -274,4 +274,67 @@ aside {
     padding: 0 1rem 1rem 1rem ;
 }
 
+/*Mise en page section 2*/
+#carteA1 {
+    grid-area: Ba;
+}
+#carteA2 {
+    grid-area: Bb
+}
+#carteA3 {
+    grid-area: Bc;
+}
+#carteA4 {
+    grid-area: Bd;
+}
+#carteA5 {
+grid-area: Be;
+}
+#carteA6 {
+    grid-area: Bf;
+}
+#section2 h2 {
+    grid-area: Bg;
+}
 
+#section2 {
+width: 78rem;
+height: 600px;
+margin-top: 2rem;
+border-radius: 1rem; 
+margin: auto;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 4rem repeat(2, 1fr);
+gap: 2rem;
+grid-template-areas:
+"Bg . . ."
+"Ba Bb Bd Be"
+"Ba Bc Bd Bf" ;
+}
+
+.imageLongue {
+    text-align: center;
+    border-radius: 1rem;
+    height: 450px;
+    box-shadow: 1px 1px 5px grey;
+}
+.imageLongue img {
+    width: 18rem;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+
+}
+.imageCourte {
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 5px grey;
+    height: 180px;
+}
+.imageCourte img {
+    width: 18rem;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0
+}
