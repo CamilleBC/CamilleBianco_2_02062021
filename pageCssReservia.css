@@ -92,7 +92,8 @@ form {
     margin-left: 1.5rem;
     border: 2px solid #d9d9d9;
     height: 3rem;
-    border-radius: 5em;    
+    border-radius: 5em; 
+    white-space: nowrap;   
 }
 
 span {
@@ -129,51 +130,76 @@ span {
 }
 /*Mise en forme section 1*/
 
+
+
 #section1 {
+    width: 100%;
+    border: dashed rgb(238, 17, 54) 2px;
     display: flex;
     justify-content: space-around;
 }
 
-/* Mise en forme ligne 1 de la section 1*/
-#ligne1 {
-    display: flex;
-    justify-content: space-around;
-    border: black dashed 1px;
+#carte1{
+    grid-area: a;
+}
+#carte2{
+    grid-area: b;
+}
+#carte3{
+    grid-area: c;
+}
+#carte4{
+    grid-area: d;
+}
+#carte5{
+    grid-area: e;
+}
+#carte6{
+    grid-area: f;
+}
+#afficher{
+    grid-area: g;
+}
+#titreHebergements{
+    grid-area: h;
+    align-self: start;
+    justify-self: start;
 }
 
-.hebergements {
-    width: 25%;
-    border: #0065FC 1px solid;
+
+article {
+    width: 50rem;
+    height: 1000px;
+    background-color:#F2F2F2 ; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3rem 12rem 12rem 2rem;
+    gap: 3rem;
+    grid-template-areas: 
+    "h h ."
+    "a b c"
+    "d e f"
+    "g . .";
+    justify-items: center;
+    align-items: center;
+}
+.carte {
+    width: 14rem;
+    height: 12rem;
+    border: 5px solid white;
+    background-color: white;
+    border-radius: 1rem;
 }
 
-
-#ligne1 img {
-    width: 240px;
-    height: auto;
+.image img {
+    width: 14rem;
+    height: 7rem;
+    border-radius: 1rem;
     object-fit: cover;
-    box-sizing: border-box;
-    border: orange 2px dashed;
-}
-
-/* Mise en forme ligne 2 de la section 1*/
-#ligne2 {
-    display: flex;
-    justify-content: space-around;
 }
 
 
-#ligne2 img {
-    width: 240px;
-}
-
-/*Mise en forme aside*/
-
-aside {
-    width: 34%;
-    border: dashed pink 1px;
-}
-
-.populaires img {
-    width: 135px;
+.imagePopulaire img {
+    width: 200px;
 }
 
