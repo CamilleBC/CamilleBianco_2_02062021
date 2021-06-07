@@ -338,3 +338,24 @@ grid-template-areas:
     object-fit: cover;
     border-radius: 1rem 1rem 0 0
 }
+
+/*Mise en page footer*/
+
+footer {
+    width: 78rem;
+    margin: auto;
+    background-color:#F2F2F2;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 0 1rem;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+footer ul li {
+    line-height: 2rem;
+}
