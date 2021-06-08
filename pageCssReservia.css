@@ -27,33 +27,43 @@ h3 {
 }
 a {
     text-decoration: none;
+    color: black;
 }
 /*Header*/
 header {
-    width: 100%;
+    width: 76rem;
+    margin: auto;
     height: 25rem;
     display: flex;
     justify-content: space-around;
-    box-sizing: border-box;
 }
 /*Alignement vertical côté gauche du Header*/
 #leftHeader {
     display: flex;
     flex-direction: column ;
     justify-content: space-around;
-    box-sizing: border-box;
 }
 
 
 /*Mise en ligne liste Nav*/
 .ligneMenu {
-    display: inline-block;
+    display: block;
     margin: 1rem;
+}
+nav ul {
+    display: flex;
+    margin: auto;
+}
+nav a:hover {
+color: blue;
+border-top: blue 2px solid;
+padding-top: 1rem;
+font-weight: bold;
 }
 
 /*Mise en forme zone de saisie*/
 form {
-    width: 50%;
+    width: 38rem;
     display: flex;  
 }
 #marqueur{
@@ -89,10 +99,12 @@ form {
 
 .filtres {    
     list-style: none;
+    font-weight: bolder;
     margin-left: 1.5rem;
-    border: 2px solid #d9d9d9;
     height: 3rem;
-    border-radius: 5em; 
+    border: 2px solid #d9d9d9;
+    border-left: none;    
+    border-radius: 5rem; 
     white-space: nowrap;   
 }
 
@@ -101,15 +113,13 @@ form {
 }
 
 #titreFiltres{    
-    margin-left:0%;
+    margin-left:0;
     border: none;
     padding-top: 1em;
          
 }
 
 .filtres i {
-    position: relative;
-    right: 0.19em;
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
@@ -125,13 +135,20 @@ form {
 
 /* Mise en forme logo i */
 
-#logementDispo i {
-    color: #0065FC;
+#dispoLogement {
+    color: blue;
+    width: 1.7rem;
+    height: 1.7rem;
+    line-height: 1.7rem;
+    text-align: center;
+    border: 2px solid #d6d4d4;
+    border-radius: 50%;
 }
 /*Mise en forme section 1*/
 
 #section1 {
-    width: 100%;
+    width: 78rem;
+    margin: auto;
     display: flex;
     justify-content: space-around;
 }
@@ -273,6 +290,9 @@ aside {
 .descriptionPopulaire {
     padding: 0 1rem 1rem 1rem ;
 }
+.descriptionPopulaire p {
+   line-height: 1.5rem;   
+}
 
 /*Mise en page section 2*/
 #carteA1 {
@@ -300,9 +320,9 @@ grid-area: Be;
 #section2 {
 width: 78rem;
 height: 600px;
-margin-top: 2rem;
 border-radius: 1rem; 
 margin: auto;
+margin-top: 2rem;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: 4rem repeat(2, 1fr);
@@ -318,6 +338,8 @@ grid-template-areas:
     border-radius: 1rem;
     height: 450px;
     box-shadow: 1px 1px 5px grey;
+    text-align: center;
+    font-weight: bold;
 }
 .imageLongue img {
     width: 18rem;
@@ -331,6 +353,8 @@ grid-template-areas:
     border-radius: 1rem;
     box-shadow: 1px 1px 5px grey;
     height: 180px;
+    text-align: center;
+    font-weight: bold;
 }
 .imageCourte img {
     width: 18rem;
@@ -342,7 +366,7 @@ grid-template-areas:
 /*Mise en page footer*/
 
 footer {
-    width: 78rem;
+    width: 76rem;
     margin: auto;
     background-color:#F2F2F2;
     display: flex;
