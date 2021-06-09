@@ -92,7 +92,7 @@ form {
     border-left: none;
     border-right: none;
 }
-#contourBouton {
+#contourBouton1 {
     color: white;  
     border: none;
     font-size: 1rem;
@@ -100,7 +100,9 @@ form {
     height: 3.125rem;
     border-radius: 0 5rem 5rem 0;
 }
-
+#contourBouton2 {
+    display:none;
+}
 /*Alignement filtres et mise en formes*/
 #filtres {
     margin-top: 1rem;
@@ -148,12 +150,23 @@ form {
 
 #dispoLogement {
     color: blue;
-    width: 1.7rem;
-    height: 1.7rem;
-    line-height: 1.7rem;
+    font-size: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
     text-align: center;
     border: 2px solid #d6d4d4;
     border-radius: 50%;
+}
+
+#dispo {
+    display: flex;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+#descriDispo {
+    margin-left: 1rem;
 }
 /*Mise en forme section 1*/
 
@@ -196,8 +209,11 @@ form {
 }
 #afficher{
     grid-area: g;
-    align-self: start;
+    align-self:start;
     justify-self: start;
+    font-weight: bold;
+    position: relative;
+    bottom: 2rem;
 }
 #titreHebergements{
     grid-area: h;
@@ -208,14 +224,15 @@ form {
 
 article {
     box-sizing: border-box;
-    height: 720px;
+    width: 100%;
+    height: 630px;
     padding: 0 2rem 0 2rem;
     background-color:#F2F2F2 ;
     border-radius: 1rem; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3rem 12rem 12rem 2rem;
-    gap: 5rem;
+    gap: 3rem;
     grid-template-areas: 
     "h h ."
     "a b c"
@@ -226,10 +243,12 @@ article {
 }
 .carte {
     box-sizing: border-box;
+    width: 100%;
     height: 13rem;
     border: 5px solid white;
     background-color: white;
     border-radius: 1rem;
+    box-shadow: 1px 1px 5px grey
 }
 
 .image img {
@@ -269,11 +288,11 @@ article {
 }
 
 aside {
-    padding: 1rem;
-    height: 650px;
+    height: 630px;
     background-color:#F2F2F2 ;
     border-radius: 1rem; 
     margin-left: 2rem;
+    padding: 0 1rem 0 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows:3rem repeat(3, 1fr);
@@ -285,11 +304,13 @@ aside {
 
 .cartePopulaire {
     width: 100%;
-    height: 9rem;
+    box-sizing: border-box;
+    height: 8.5rem;
     border: 5px solid white;
     background-color: white;
     border-radius: 1rem;
     display: flex;
+    box-shadow: 1px 1px 5px grey;
 }
 
 .imagePopulaire img {
@@ -300,11 +321,10 @@ aside {
 }
 .descriptionPopulaire {
     width: 10rem;
-    padding: 2rem ;
-    padding-top: 0;
+    padding: 0 1rem 0 1rem ;
 }
 .descriptionPopulaire p {
-   line-height: 1.5rem;   
+   line-height: 1rem;   
 }
 
 /*Mise en page section 2*/
@@ -397,32 +417,36 @@ footer ul li {
 }
 
 /*Mise en place responsive pour tel*/
-@media screen and (max-width : 480px) {
+@media screen and (min-width : 320px ) and (max-width : 600px) {
 
    body {
-      max-width: 480px;
-      
+      max-width: 600px; 
+      min-width: 320px;     
    }
    
    /*Mise en forme top header*/
+    header{
+        height: 46rem;
+    }
     nav a {
-        margin: 3.5rem;
+     margin: 0;     
     }
 
     nav {
         width: 100%;
-        text-align: center;
         border-bottom: 2px rgba(196, 192, 192, 0.24) solid;
         padding-bottom: 1rem;
+        display: flex;
+        justify-content: space-around;
     }
    #titre {
         grid-area: t;
-        padding: 0.5rem 1rem 1rem 1rem;
+        padding: 0.5rem 2rem 1rem 2rem;
     }
 
     #topHeader {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows:0.5fr 0.5fr 1fr;
+        grid-template-rows:0.5fr 0.7fr 1fr;
         grid-template-areas:
         "l . i"
         "n n n"
@@ -431,38 +455,48 @@ footer ul li {
     }
     
    /*Mise en forme bottom header*/
+    #bottomHeader {
+        padding: 0 1rem 1rem 1rem;
+    }
+    
+    form {
+        justify-content: center;
+    }
+    #contourBouton1 {
+        display: none;
+    }
+
+    #contourBouton2 i {
+        color: white;
+    }
+
+
+    #contourBouton2 {
+    display: block;  
+    border: none;
+    font-size: 1rem;
+    background-color: blue;
+    height: 3.125rem;
+    border-radius: 0 5rem 5rem 0;
+    }
 
     #titreFiltres {
         grid-area: ft;
-    }
-    #fArgent {
-        grid-area: far;
-    }
-    #fFamille {
-        grid-area: ff;
-    }
-    #fRomantique {
-        grid-area: fr;
-    }
-    #fAnimaux {
-        grid-area:fan ;
+        width: 100%;
     }
     #filtres {
-        display: grid;
         height: 15rem;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr) ;
-        grid-template-areas: 
-        "ft ."
-        "far ff"
-        "fr ."
-        "fan .";
+        margin: auto;
+        
+    }
+
+    #descriDispo {
+        line-height: 1.5rem;
     }
     
     #section1 {
         display: flex;
         flex-direction: column-reverse;
-        margin-top: 21rem;
     }
     
     aside {
@@ -474,7 +508,7 @@ footer ul li {
         margin-top: 2rem;
         display: flex ;
         flex-direction: column;
-        height: 1950px
+        height: 1700px
     }
 
     #section2 {
@@ -493,8 +527,7 @@ footer ul li {
         height: 200px;
     }
     .imageLongue img {
-        height: 140px;
-        object-fit: cover;    
+        height: 140px;    
     }
     .imageCourte {
         height: 200px;

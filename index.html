@@ -13,8 +13,8 @@
                 <div id="logo"><img src="images/logo/Reservia.svg" alt="Logo Reservia"></div>
 
                 <nav>
-                    <a href="#hebergementsAncre" >Hébergements</a>
-                    <a href="#activitesAncre">Activités</a>
+                    <a href="#hebergementsAncre" id="hebergements">Hébergements</a>
+                    <a href="#activitesAncre" id="activites">Activités</a>
                 </nav>
 
                 <a href="#" id="inscrire">S'incrire</a>  
@@ -31,19 +31,20 @@
         
                         <div id="marqueur"><label for="ville"><i class="fas fa-map-marker-alt"></i></label></div>
                         <div><input type="text" name="ville" placeholder="Marseille,France" id="ville"></div>
-                        <div><input type="submit" value="Rechercher" id="contourBouton"></div>
+                        <div><input type="submit" value="Rechercher" id="contourBouton1"></div>
+                        <div><button id="contourBouton2"><i class="fas fa-search"></i></button></div>
                 </form>             
                         
           
                 <div id="filtres">
-                        <div class="filtres" id="titreFiltres"><strong>Filtres</strong></div>
+                        <div class="titreFiltres" id="titreFiltres"><strong>Filtres</strong></div>
                         <div class="filtres" id="fArgent"><i class="fas fa-money-bill-wave"></i><span class="dFiltres">Economique</span></div>
                         <div class="filtres" id="fFamille"><i class="fas fa-child"></i><span class="dFiltres">Familiale</span></div>
                         <div class="filtres" id="fRomantique"><i class="fas fa-heart"></i><span class="dFiltres">Romantique</span></div>
                         <div class="filtres" id="fAnimaux"><i class="fas fa-dog"></i><span class="dFiltres">Animaux autorisés</span></div>
                 </div>
 
-                <p><i class="fas fa-info" id="dispoLogement"></i> Plus de 500 logements sont disponibles dans cette ville</p>
+                <div id="dispo"><i class="fas fa-info" id="dispoLogement"></i><div id="descriDispo"> Plus de 500 logements sont disponibles dans cette ville</div></div>
         
             </div>   
           
