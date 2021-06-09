@@ -1,7 +1,4 @@
-#bloc_blanc {
-    width: 100%;
-    margin: auto;
-}
+
 
 @font-face {
     font-family: Raleway;
@@ -12,6 +9,8 @@ body{
     font-family: Raleway,sans-serif;
     color: black;
     font-size: 100%;
+    max-width: 1440px;
+    margin: auto;
 }
 
 h1 {
@@ -31,29 +30,40 @@ a {
 }
 /*Header*/
 header {
-    width: 76rem;
+    box-sizing: content-box;
     margin: auto;
-    height: 25rem;
-    display: flex;
-    justify-content: space-around;
+    height: 23rem;
+  
 }
 /*Alignement vertical côté gauche du Header*/
-#leftHeader {
-    display: flex;
-    flex-direction: column ;
-    justify-content: space-around;
+
+#inscrire {
+    grid-area: i;
 }
 
+nav{
+    grid-area: n;
+}
+
+
+#logo{
+    grid-area: l;
+}
+
+#topHeader {
+    display: grid;
+    grid-template-columns: auto 17rem 7rem;
+    grid-template-areas: 
+    "l n i";
+    align-items: center;
+}
+
+nav a {
+    margin-left: 2rem;
+}
 
 /*Mise en ligne liste Nav*/
-.ligneMenu {
-    display: block;
-    margin: 1rem;
-}
-nav ul {
-    display: flex;
-    margin: auto;
-}
+
 nav a:hover {
 color: blue;
 border-top: blue 2px solid;
@@ -63,8 +73,8 @@ font-weight: bold;
 
 /*Mise en forme zone de saisie*/
 form {
-    width: 38rem;
-    display: flex;  
+    display: flex;
+    flex-wrap: wrap;
 }
 #marqueur{
     border: #F2F2F2 1px solid;
@@ -92,13 +102,14 @@ form {
 }
 
 /*Alignement filtres et mise en formes*/
-#filtres ul {
+#filtres {
+    margin-top: 1rem;
     display: flex;
     padding: 0;/*Retire décalage dû à la liste*/
+    flex-wrap: wrap;
 }
 
 .filtres {    
-    list-style: none;
     font-weight: bolder;
     margin-left: 1.5rem;
     height: 3rem;
@@ -147,7 +158,7 @@ form {
 /*Mise en forme section 1*/
 
 #section1 {
-    width: 78rem;
+    box-sizing: border-box;
     margin: auto;
     display: flex;
     justify-content: space-around;
@@ -196,15 +207,15 @@ form {
 
 
 article {
-    width: 50rem;
-    height: 650px;
+    box-sizing: border-box;
+    height: 720px;
     padding: 0 2rem 0 2rem;
     background-color:#F2F2F2 ;
     border-radius: 1rem; 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 3rem 12rem 12rem 2rem;
-    gap: 3rem;
+    gap: 5rem;
     grid-template-areas: 
     "h h ."
     "a b c"
@@ -214,15 +225,15 @@ article {
     align-items: center;
 }
 .carte {
-    width: 14rem;
-    height: 12rem;
+    box-sizing: border-box;
+    height: 13rem;
     border: 5px solid white;
     background-color: white;
     border-radius: 1rem;
 }
 
 .image img {
-    width: 14rem;
+    width: 100%;
     height: 7rem;
     border-radius: 1rem;
     object-fit: cover;
@@ -258,7 +269,7 @@ article {
 }
 
 aside {
-    width: 25rem;
+    padding: 1rem;
     height: 650px;
     background-color:#F2F2F2 ;
     border-radius: 1rem; 
@@ -273,7 +284,7 @@ aside {
 }
 
 .cartePopulaire {
-    width: 20rem;
+    width: 100%;
     height: 9rem;
     border: 5px solid white;
     background-color: white;
@@ -283,12 +294,14 @@ aside {
 
 .imagePopulaire img {
     width: 8rem;
-    height: 9rem;
+    height: 100%;
     border-radius: 1rem;
     object-fit: cover;
 }
 .descriptionPopulaire {
-    padding: 0 1rem 1rem 1rem ;
+    width: 10rem;
+    padding: 2rem ;
+    padding-top: 0;
 }
 .descriptionPopulaire p {
    line-height: 1.5rem;   
@@ -318,10 +331,10 @@ grid-area: Be;
 }
 
 #section2 {
-width: 78rem;
 height: 600px;
 border-radius: 1rem; 
 margin: auto;
+padding: 2rem;
 margin-top: 2rem;
 display: grid;
 grid-template-columns: repeat(4, 1fr);
@@ -342,7 +355,7 @@ grid-template-areas:
     font-weight: bold;
 }
 .imageLongue img {
-    width: 18rem;
+    width: 100%;
     height: 400px;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
@@ -357,7 +370,7 @@ grid-template-areas:
     font-weight: bold;
 }
 .imageCourte img {
-    width: 18rem;
+    width: 100%;
     height: 120px;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0
@@ -366,12 +379,11 @@ grid-template-areas:
 /*Mise en page footer*/
 
 footer {
-    width: 76rem;
     margin: auto;
     background-color:#F2F2F2;
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem 0 1rem;
+    padding: 1rem;
 }
 
 footer ul {
@@ -383,3 +395,114 @@ footer ul {
 footer ul li {
     line-height: 2rem;
 }
+
+/*Mise en place responsive pour tel*/
+@media screen and (max-width : 480px) {
+
+   body {
+      max-width: 480px;
+      
+   }
+   
+   /*Mise en forme top header*/
+    nav a {
+        margin: 3.5rem;
+    }
+
+    nav {
+        width: 100%;
+        text-align: center;
+        border-bottom: 2px rgba(196, 192, 192, 0.24) solid;
+        padding-bottom: 1rem;
+    }
+   #titre {
+        grid-area: t;
+        padding: 0.5rem 1rem 1rem 1rem;
+    }
+
+    #topHeader {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:0.5fr 0.5fr 1fr;
+        grid-template-areas:
+        "l . i"
+        "n n n"
+        "t t t" ;
+        justify-items: center;
+    }
+    
+   /*Mise en forme bottom header*/
+
+    #titreFiltres {
+        grid-area: ft;
+    }
+    #fArgent {
+        grid-area: far;
+    }
+    #fFamille {
+        grid-area: ff;
+    }
+    #fRomantique {
+        grid-area: fr;
+    }
+    #fAnimaux {
+        grid-area:fan ;
+    }
+    #filtres {
+        display: grid;
+        height: 15rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr) ;
+        grid-template-areas: 
+        "ft ."
+        "far ff"
+        "fr ."
+        "fan .";
+    }
+    
+    #section1 {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 21rem;
+    }
+    
+    aside {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    article {
+        margin-top: 2rem;
+        display: flex ;
+        flex-direction: column;
+        height: 1950px
+    }
+
+    #section2 {
+        display: flex;
+        flex-direction: column;
+        height: 1500px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+
+    .imageLongue {
+        height: 200px;
+    }
+    .imageLongue img {
+        height: 140px;
+        object-fit: cover;    
+    }
+    .imageCourte {
+        height: 200px;
+    }
+    .imageCourte img {
+        height: 140px;
+    }
+    
+}
+
+/* changer le gap pour intégrer afficher plus*/
