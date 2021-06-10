@@ -35,20 +35,13 @@ header {
     height: 23rem;
   
 }
-/*Alignement vertical côté gauche du Header*/
+/*Mise en place top header*/
 
-#inscrire {
-    grid-area: i;
-}
+/*Grid pour aligner la nav et le logo*/
 
-nav{
-    grid-area: n;
-}
-
-
-#logo{
-    grid-area: l;
-}
+#logo{grid-area: l;}
+#inscrire {grid-area: i;}
+nav{grid-area: n;}
 
 #topHeader {
     display: grid;
@@ -62,7 +55,7 @@ nav a {
     margin-left: 2rem;
 }
 
-/*Mise en ligne liste Nav*/
+/*Animation pour les liens du nav*/
 
 nav a:hover {
 color: blue;
@@ -107,7 +100,6 @@ form {
 #filtres {
     margin-top: 1rem;
     display: flex;
-    padding: 0;/*Retire décalage dû à la liste*/
     flex-wrap: wrap;
 }
 
@@ -121,10 +113,6 @@ form {
     white-space: nowrap;   
 }
 
-.dFiltres {
-    margin-right: 1rem;
-}
-
 #titreFiltres{    
     margin-left:0;
     border: none;
@@ -132,22 +120,38 @@ form {
          
 }
 
+.dFiltres {
+    margin-right: 1rem; /*Séparation logo et texte à l'intérieur des filtres*/
+}
+
+/*Mise en forme logo sur les filtres*/
 .filtres i {
     width: 3rem;
     height: 3rem;
     line-height: 3rem;
-    border-radius:50% ;/*padding-top et padding-bottom pour centrer ont besoin d'être : (width-taille du logo)/2*/
+    border-radius:50% ;
     text-align: center;
     background-color: #DEEBFF ;
     color: #0065FC;
 }
 
+/* Animation filtres*/
 .filtres:hover {
     background-color: #bac7db;
 }
 
-/* Mise en forme logo i */
+/* Mise en forme phrase dispo logement*/
+#dispo {
+    display: flex;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
 
+#descriDispo {
+    margin-left: 1rem;
+}
+
+/* Mise en forme logo i*/
 #dispoLogement {
     color: blue;
     font-size: 0.75rem;
@@ -159,15 +163,7 @@ form {
     border-radius: 50%;
 }
 
-#dispo {
-    display: flex;
-    line-height: 2rem;
-    margin-top: 2rem;
-}
 
-#descriDispo {
-    margin-left: 1rem;
-}
 /*Mise en forme section 1*/
 
 #section1 {
@@ -177,36 +173,20 @@ form {
     justify-content: space-around;
 }
 
-.fas {
-    color: #0065FC;
-}
-.far i {
-    color: #dad6d6;
-}
-
-.description {
-    padding : 0.5rem 0 0.5rem 0;
-    line-height: 1.5rem;
+/*Grid des éléments de l'article*/
+#titreHebergements{
+    grid-area: h;
+    align-self: start;
+    justify-self: start;
 }
 
-#carte1{
-    grid-area: a;
-}
-#carte2{
-    grid-area: b;
-}
-#carte3{
-    grid-area: c;
-}
-#carte4{
-    grid-area: d;
-}
-#carte5{
-    grid-area: e;
-}
-#carte6{
-    grid-area: f;
-}
+#carte1{grid-area: a;}
+#carte2{grid-area: b;}
+#carte3{grid-area: c;}
+#carte4{grid-area: d;}
+#carte5{grid-area: e;}
+#carte6{grid-area: f;}
+
 #afficher{
     grid-area: g;
     align-self:start;
@@ -215,12 +195,6 @@ form {
     position: relative;
     bottom: 2rem;
 }
-#titreHebergements{
-    grid-area: h;
-    align-self: start;
-    justify-self: start;
-}
-
 
 article {
     box-sizing: border-box;
@@ -241,6 +215,8 @@ article {
     justify-items: center;
     align-items: center;
 }
+
+/*Mise en forme des cartes Hébergements*/
 .carte {
     box-sizing: border-box;
     width: 100%;
@@ -258,7 +234,19 @@ article {
     object-fit: cover;
 }
 
-/*Aligner flèche et titre Aside*/
+.description {
+    padding : 0.5rem 0 0.5rem 0;
+    line-height: 1.5rem;
+}
+/*Coloration étoiles*/
+.fas {
+    color: #0065FC;
+}
+.far i {
+    color: #dad6d6;
+}
+
+/*Alignement flèche et titre Aside*/
 
 #titreAside {
     grid-area: Ad;
@@ -274,7 +262,7 @@ article {
     line-height: 4.7rem;
 }
 
-/* Mise en page Aside en Css grid*/
+/* Grid des éléments de l'Aside */
 #carte7 {
     grid-area: Aa;
 }
@@ -302,6 +290,7 @@ aside {
     align-items: center;
 }
 
+/*Mise en forme des cartes Populaires*/
 .cartePopulaire {
     width: 100%;
     box-sizing: border-box;
@@ -328,27 +317,15 @@ aside {
 }
 
 /*Mise en page section 2*/
-#carteA1 {
-    grid-area: Ba;
-}
-#carteA2 {
-    grid-area: Bb
-}
-#carteA3 {
-    grid-area: Bc;
-}
-#carteA4 {
-    grid-area: Bd;
-}
-#carteA5 {
-grid-area: Be;
-}
-#carteA6 {
-    grid-area: Bf;
-}
-#section2 h2 {
-    grid-area: Bg;
-}
+
+/*Grid des éléments de la section 2*/
+#section2 h2 {grid-area: Bg;}
+#carteA1 {grid-area: Ba;}
+#carteA2 {grid-area: Bb}
+#carteA3 {grid-area: Bc;}
+#carteA4 {grid-area: Bd;}
+#carteA5 {grid-area: Be;}
+#carteA6 {grid-area: Bf;}
 
 #section2 {
 height: 600px;
@@ -366,6 +343,7 @@ grid-template-areas:
 "Ba Bc Bd Bf" ;
 }
 
+/*Mise en forme des cartes Activités*/
 .imageLongue {
     text-align: center;
     border-radius: 1rem;
@@ -447,7 +425,7 @@ footer ul li {
     #fleche {
         margin-left: 2rem;
     }
-    /*Corps aside tablette*/
+    /*Mise en page corps aside tablette*/
 
     .cartePopulaire {
         width: auto;
@@ -504,7 +482,7 @@ footer ul li {
         margin-bottom: 1rem;
     }
 }
-/*Mise en place responsive pour tel*/
+/*Mise en place responsive pour téléphone*/
 @media screen and (min-width : 320px ) and (max-width : 600px) {
 
    body {
@@ -512,12 +490,9 @@ footer ul li {
       min-width: 320px;     
    }
    
-   /*Mise en forme top header*/
+   /*Mise en forme top header pour téléphone*/
     header{
         height: 46rem;
-    }
-    nav a {
-     margin: 0;     
     }
 
     nav {
@@ -527,6 +502,11 @@ footer ul li {
         display: flex;
         justify-content: space-around;
     }
+
+    nav a {
+     margin: 0;     
+    }
+
    #titre {
         grid-area: t;
         padding: 0.5rem 2rem 1rem 2rem;
@@ -542,11 +522,13 @@ footer ul li {
         justify-items: center;
     }
     
-   /*Mise en forme bottom header*/
+   /*Mise en forme bottom header pour téléphone*/
+
     #bottomHeader {
         padding: 0 1rem 1rem 1rem;
     }
     
+    /*Mis en page zone de saisie pour téléphone*/
     form {
         justify-content: center;
     }
@@ -558,7 +540,6 @@ footer ul li {
         color: white;
     }
 
-
     #contourBouton2 {
     display: block;  
     border: none;
@@ -568,30 +549,34 @@ footer ul li {
     border-radius: 0 5rem 5rem 0;
     }
 
+    /* Mise en page filtres pour téléphone*/
     #titreFiltres {
         grid-area: ft;
         width: 100%;
     }
+
     #filtres {
         height: 15rem;
         margin: auto;
-        
     }
 
     #descriDispo {
         line-height: 1.5rem;
     }
     
+    /*Mise en page section 1 pour téléphone*/
     #section1 {
         display: flex;
         flex-direction: column-reverse;
     }
     
+    /*Mise en page aside pour téléphone*/
     aside {
         margin: 0;
         border-radius: 0;
     }
 
+    /*Mise en page article pour téléphone*/
     article {
         height: 1700px;
         margin-top: 2rem;
@@ -600,18 +585,12 @@ footer ul li {
         border-radius: 0;
     }
 
+    /*Mise en page section 2 pour téléphone*/
     #section2 {
         display: flex;
         flex-direction: column;
         height: 1500px;
     }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-        padding-left: 2rem;
-    }
-
     .imageLongue {
         height: 200px;
     }
@@ -624,6 +603,12 @@ footer ul li {
     .imageCourte img {
         height: 140px;
     }
-    
+
+    /*Mise en page footer pour téléphone*/
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+    }
 }
 
