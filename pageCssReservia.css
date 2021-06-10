@@ -415,7 +415,95 @@ footer ul {
 footer ul li {
     line-height: 2rem;
 }
+@media screen and (min-width : 600px ) and (max-width : 1024px) {
+    body {
+        max-width: 1024px;
+    }
+    /* Mise en place header tablette*/
+    header {
+        height: 26rem;
+    }
 
+    #titre {
+        white-space: nowrap;
+        width: 18rem;
+    }
+    /* Mise en place section 1 tablette*/
+    #section1 {
+        flex-direction: column-reverse;
+    }
+    /* Mise en place aside tablette*/
+    aside {
+        margin: 0;
+        margin-top: 1rem;
+        border-radius: 0;
+    }
+    /*Titre aside tablette*/
+    #titreAside {
+        width: auto;
+        margin: auto;
+    }
+
+    #fleche {
+        margin-left: 2rem;
+    }
+    /*Corps aside tablette*/
+
+    .cartePopulaire {
+        width: auto;
+    }
+    .descriptionPopulaire {
+        width: 20rem;
+        padding: 0;
+        text-align: center;
+    }
+
+    .imagePopulaire img {
+        width: 15rem;
+    }
+    /*Mise en page article tablette*/
+    article {
+        height: 850px;
+        margin-top: 3rem;
+        border-radius: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 3rem repeat(3, 12rem) 2rem;
+        grid-template-areas: 
+        "h h"
+        "a b"
+        "c d"
+        "e f"
+        "g .";  
+    }
+
+    /*Mise en page section 2 tablette*/
+    #section2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 4rem repeat(3, 1fr);
+        gap: 2rem;
+        grid-template-areas:
+        "Bg ."
+        "Ba Bb"
+        "Bc Bd"
+        "Be Bf" ;
+        height: 800px;
+    }
+    .imageLongue {
+        height: 200px;
+    }
+    .imageLongue img {
+        height: 140px;    
+    }
+    .imageCourte {
+        height: 200px;
+    }
+    .imageCourte img {
+        height: 140px;
+    }
+    .filtres {
+        margin-bottom: 1rem;
+    }
+}
 /*Mise en place responsive pour tel*/
 @media screen and (min-width : 320px ) and (max-width : 600px) {
 
@@ -505,10 +593,11 @@ footer ul li {
     }
 
     article {
+        height: 1700px;
         margin-top: 2rem;
         display: flex ;
         flex-direction: column;
-        height: 1700px
+        border-radius: 0;
     }
 
     #section2 {
@@ -538,4 +627,3 @@ footer ul li {
     
 }
 
-/* changer le gap pour intégrer afficher plus*/
