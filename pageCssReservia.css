@@ -40,7 +40,11 @@ header {
 /*Grid pour aligner la nav et le logo*/
 
 #logo{grid-area: l;}
-#inscrire {grid-area: i;}
+#inscrire {
+    grid-area: i;
+    font-weight: bold;
+    color: #0065FC;
+}
 nav{grid-area: n;}
 
 #topHeader {
@@ -58,10 +62,11 @@ nav a {
 /*Animation pour les liens du nav*/
 
 nav a:hover {
-color: blue;
-border-top: blue 2px solid;
-padding-top: 1rem;
+color: #0065FC;
+border-top: #0065FC 2px solid;
+padding-top: 0.8rem;
 font-weight: bold;
+box-sizing: border-box;
 }
 
 /*Mise en forme zone de saisie*/
@@ -89,7 +94,7 @@ form {
     color: white;  
     border: none;
     font-size: 1rem;
-    background-color: blue;
+    background-color: #0065FC;
     height: 3.125rem;
     border-radius: 0 5rem 5rem 0;
 }
@@ -121,7 +126,7 @@ form {
 }
 
 .dFiltres {
-    margin-right: 1rem; /*Séparation logo et texte à l'intérieur des filtres*/
+    margin: 0 1rem 0 1rem;
 }
 
 /*Mise en forme logo sur les filtres*/
@@ -153,7 +158,7 @@ form {
 
 /* Mise en forme logo i*/
 #dispoLogement {
-    color: blue;
+    color: #0065FC;
     font-size: 0.75rem;
     max-width: 1.5rem;
     max-height: 1.5rem;
@@ -265,17 +270,9 @@ article {
 }
 
 /* Grid des éléments de l'Aside */
-#carte7 {
-    grid-area: Aa;
-}
-
-#carte8 {
-    grid-area: Ab;
-}
-
-#carte9 {
-    grid-area: Ac;
-}
+#carte7 {grid-area: Aa;}
+#carte8 {grid-area: Ab;}
+#carte9 {grid-area: Ac;}
 
 aside {
     height: 630px;
@@ -382,7 +379,7 @@ footer {
     margin: auto;
     background-color:#F2F2F2;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
 }
 
@@ -499,15 +496,26 @@ footer ul li {
 
     nav {
         width: 100%;
-        border-bottom: 2px rgba(196, 192, 192, 0.24) solid;
-        padding-bottom: 1rem;
+        
         display: flex;
         justify-content: space-around;
     }
 
     nav a {
-     margin: 0;     
+     margin: 0;
+     border-bottom: 2px rgba(196, 192, 192, 0.24) solid;
+     padding-bottom: 1rem;
+     width: 100%;  
+     text-align: center; 
     }
+
+    nav a:hover {
+        color: blue;
+        border-top: none;
+        padding-top: none;
+        border-bottom: 2px blue solid;
+        font-weight: bold;
+        }
 
    #titre {
         grid-area: t;
