@@ -54,7 +54,6 @@ nav{grid-area: n;}
     grid-template-areas: 
     "l n i";
     align-items: center;
-    padding-bottom: 1;
 }
 
 nav a {
