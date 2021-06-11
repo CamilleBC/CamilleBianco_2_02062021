@@ -32,7 +32,8 @@ a {
 header {
     box-sizing: content-box;
     margin: auto;
-    height: 23rem;
+    height: 368px;
+    padding: 1.25rem;
   
 }
 /*Mise en place top header*/
@@ -49,14 +50,15 @@ nav{grid-area: n;}
 
 #topHeader {
     display: grid;
-    grid-template-columns: auto 17rem 7rem;
+    grid-template-columns: auto 16rem 7rem;
     grid-template-areas: 
     "l n i";
     align-items: center;
+    padding-bottom: 1;
 }
 
 nav a {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 /*Animation pour les liens du nav*/
@@ -73,17 +75,18 @@ box-sizing: border-box;
 form {
     display: flex;
     flex-wrap: wrap;
+    padding: 1rem;
 }
 #marqueur{
     border: #F2F2F2 1px solid;
     background-color: #F2F2F2;
-    height: 3rem;
+    height: 48px;
     line-height: 3rem;
     padding: 0 1rem 0 1rem;
     border-radius: 5rem 0 0 5rem;
 }
 #ville {
-    height: 2.75rem; 
+    height: 44px; 
     font-size: 1rem;
     border: 2px #F2F2F2 solid;
     padding-left: 1rem;
@@ -95,7 +98,7 @@ form {
     border: none;
     font-size: 1rem;
     background-color: #0065FC;
-    height: 3.125rem;
+    height: 50px;
     border-radius: 0 5rem 5rem 0;
 }
 #contourBouton2 {
@@ -103,7 +106,7 @@ form {
 }
 /*Alignement filtres et mise en formes*/
 #filtres {
-    margin-top: 1rem;
+    padding :1rem 0 1rem 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -149,7 +152,8 @@ form {
 #dispo {
     display: flex;
     line-height: 2rem;
-    margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #descriDispo {
@@ -227,7 +231,7 @@ article {
 .carte {
     box-sizing: border-box;
     width: 100%;
-    height: 13rem;
+    height: 208px;
     border: 5px solid white;
     background-color: white;
     border-radius: 1rem;
@@ -236,7 +240,7 @@ article {
 
 .image img {
     width: 100%;
-    height: 7rem;
+    height: 112px;
     border-radius: 1rem;
     object-fit: cover;
 }
@@ -293,7 +297,7 @@ aside {
 .cartePopulaire {
     width: 100%;
     box-sizing: border-box;
-    height: 8.5rem;
+    height: 136px;
     border: 5px solid white;
     background-color: white;
     border-radius: 1rem;
@@ -327,19 +331,19 @@ aside {
 #carteA6 {grid-area: Bf;}
 
 #section2 {
-height: 600px;
-border-radius: 1rem; 
-margin: auto;
-padding: 2rem;
-margin-top: 2rem;
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-grid-template-rows: 4rem repeat(2, 1fr);
-gap: 2rem;
-grid-template-areas:
-"Bg . . ."
-"Ba Bb Bd Be"
-"Ba Bc Bd Bf" ;
+    height: 600px;
+    border-radius: 1rem; 
+    margin: auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 4rem repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+    "Bg . . ."
+    "Ba Bb Bd Be"
+    "Ba Bc Bd Bf" ;
 }
 
 /*Mise en forme des cartes Activités*/
@@ -398,7 +402,7 @@ footer ul li {
     }
     /* Mise en place header tablette*/
     header {
-        height: 26rem;
+        height: 100%;
     }
 
     #titre {
@@ -491,31 +495,36 @@ footer ul li {
    
    /*Mise en forme top header pour téléphone*/
     header{
-        height: 60rem;
+        height: 100%;
+        padding: 0;
     }
 
     nav {
         width: 100%;
-        
         display: flex;
         justify-content: space-around;
     }
 
     nav a {
-     margin: 0;
-     border-bottom: 2px rgba(196, 192, 192, 0.24) solid;
-     padding-bottom: 1rem;
-     width: 100%;  
-     text-align: center; 
+        margin: 0;
+        border-bottom: 2px rgba(196, 192, 192, 0.24) solid;
+        padding-bottom: 1rem;
+        width: 100%;  
+        text-align: center; 
     }
 
     nav a:hover {
-        color: blue;
         border-top: none;
-        padding-top: none;
-        border-bottom: 2px blue solid;
-        font-weight: bold;
-        }
+        color: black;
+        padding:0;
+        font-weight: normal
+    }
+
+    nav a:focus {
+        border-bottom: 2px #0065FC solid;
+        font-weight : bold; 
+        color: #0065FC;
+    }
 
    #titre {
         grid-area: t;
@@ -554,7 +563,7 @@ footer ul li {
     display: block;  
     border: none;
     font-size: 1rem;
-    background-color: blue;
+    background-color: #0065FC;
     height: 3.125rem;
     border-radius: 0 5rem 5rem 0;
     }
@@ -593,7 +602,7 @@ footer ul li {
 
     /*Mise en page article pour téléphone*/
     article {
-        height: 1700px;
+        height: 100%;
         margin-top: 2rem;
         display: flex ;
         flex-direction: column;
@@ -604,7 +613,7 @@ footer ul li {
     #section2 {
         display: flex;
         flex-direction: column;
-        height: 1500px;
+        height: 100%;
     }
     .imageLongue {
         height: 200px;
