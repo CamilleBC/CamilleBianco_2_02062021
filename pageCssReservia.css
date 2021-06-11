@@ -155,8 +155,10 @@ form {
 #dispoLogement {
     color: blue;
     font-size: 0.75rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
     border: 2px solid #d6d4d4;
@@ -492,7 +494,7 @@ footer ul li {
    
    /*Mise en forme top header pour téléphone*/
     header{
-        height: 46rem;
+        height: 60rem;
     }
 
     nav {
@@ -556,9 +558,14 @@ footer ul li {
     }
 
     #filtres {
-        height: 15rem;
+        height: 20rem;
         margin: auto;
     }
+
+    .filtres {
+        margin-top: 1rem;
+    }
+
 
     #descriDispo {
         line-height: 1.5rem;
