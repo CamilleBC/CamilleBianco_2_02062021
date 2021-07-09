@@ -182,6 +182,9 @@ form {
     display: flex;
     justify-content: space-around;
 }
+#section1Titre {
+    display: none;
+}
 
 /*Grid des éléments de l'article*/
 #titreHebergements{
